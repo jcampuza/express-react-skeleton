@@ -48,7 +48,7 @@ if (!isProduction) {
 }
 
 // Configure errors
-const configureErrors = require('./errors')
+const configureErrors = require('./errorConfig')
 configureErrors(app, isProduction);
 
 // Start server
