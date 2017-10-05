@@ -43,8 +43,10 @@ require('./routes/index')(app, isProduction);
 // Serve static assets in production
 if (!isProduction) {
 	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'public', 'build', 'index.html'));
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 	})
+} else {
+	console.log('DEV: Run client build when in development mode')
 }
 
 // Configure errors

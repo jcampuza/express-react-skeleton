@@ -3,7 +3,7 @@ const { ServerError } = require('./lib/errors');
 const configureErrors = (app, isProduction = false) => {
 	// If we get here there is a problem (should have matched * handler)
 	app.use((req, res, next) => {
-		const err = ServerError ('Not Found');
+		const err = new ServerError('Not Found');
 		err.status = 500;
 		next(err);
 	});
