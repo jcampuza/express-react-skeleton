@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded(config.bodyParser.urlEncoded));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(methodOverride());
-app.use(express.static(__dirname + '/public/build'));
+app.use(express.static(__dirname + '/client/build'));
 
 // error stack trace enhancement
 if (!isProduction) {
